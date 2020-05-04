@@ -24,7 +24,7 @@ namespace ConsoleApp
                     {
                         count += 1;
                     }
-                    Console.WriteLine("C# Thread finished with count={0}", count);
+                    Console.WriteLine("C# thread finished with count={0}", count);
                 });
             }
 
@@ -44,8 +44,9 @@ namespace ConsoleApp
             ProcessInRust();
             rustStopwatch.Stop();
 
-            Console.WriteLine("C#: " + csharpStopwatch.ElapsedTicks);
-            Console.WriteLine("Rust: " + rustStopwatch.ElapsedTicks);
+            Console.WriteLine();
+            Console.WriteLine("Execution time in C#: " + csharpStopwatch.Elapsed);
+            Console.WriteLine("Execution time in Rust: " + rustStopwatch.Elapsed);
         }
     }
 }
